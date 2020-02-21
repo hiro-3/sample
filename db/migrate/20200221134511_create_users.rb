@@ -1,12 +1,8 @@
-class CreateUsers < ActiveRecord::Migration[5.1]
-  def new
-    @user=User.new
-  end
-    def change
+class CreateUsers < ActiveRecord::Migration[5.2]
+  def change
     create_table :users do |t|
       t.string :name
       t.string :email
-
       t.timestamps
     end
   end
