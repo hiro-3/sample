@@ -55,11 +55,18 @@ h1, h2 {
   background-size: cover;
   background-color: #464646;
 
-  .users-new-container {
-    padding-top: 220px;
+.users-new-container {
+  padding-top: 220px;
 
-    .form-group {
-      margin-bottom: 20px;
+.form-group {
+  margin-bottom: 20px;
+      
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+     }
     }
   }
 }
