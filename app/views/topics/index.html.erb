@@ -19,12 +19,13 @@
              <%= image_tag 'icons/heart.png', class: 'topic-index-icon2' %>
              <% end %>
              <%= topic.favorite_users.count %>
-             
+            <% end %>
+          
             
-            <% end %> 
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            
           </div>
         </div>
       </div>

@@ -36,6 +36,11 @@
                 <%= image_tag "icons/logout.png" %>
               <% end %>
             </li>
+            <li>
+              <%= link_to topics_index_path do %>
+                <%= image_tag "icons/picture.png" %>
+                <% end %>
+            </li>    
           <% else %>
             <li>
               <%= link_to new_user_path do %>
