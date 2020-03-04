@@ -6,17 +6,17 @@ class CommentsController < ApplicationController
   
   
    def create
-   @comment = current_user.(comment_params)
-   comments.user_id = current_user.id
-   comments.topic_id = params[:topic_id]
-   
-    if @comment.save
-      redirect_to favorite_path, success: "コメントをしました"
+    
+   @comment = current_user.comments.new(comment_params)
+   @comment.user_id = current_user.id
+   @comment.topic_id =params[:topic_id]
+   if @comment.save
+      redirect_to comments_path, success: "コメントをしました"
     else
       flash.now[:danger] = "コメントできませんでした"
       render :new
     end
-end    
+  end
  
    private
     def comment_params

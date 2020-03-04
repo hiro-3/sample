@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/create'
-  get 'comments/destroy'
   get  '/comments', to: 'comments#new'
   post '/comments', to: 'comments#create'
  delete '/comments', to: 'comments#destroy'
@@ -20,7 +18,8 @@ Rails.application.routes.draw do
  delete '/logout', to: 'sessions#destroy'
  
  resources :users
- resources :topics
+ resources :topics 
+ resources :comments
  
  get 'favorites/index'
  post '/favorites', to: 'favorites#create'
