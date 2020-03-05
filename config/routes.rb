@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get  '/comments', to: 'comments#new'
-  post '/comments', to: 'comments#create'
- delete '/comments', to: 'comments#destroy'
-  
-  
-  
-  
+  root 'pages#index'
   get 'topics/new'
   get 'topics/index'
   get 'sessions/new'
@@ -26,5 +20,11 @@ Rails.application.routes.draw do
  delete '/favorites', to: 'favorites#destroy'
  
  end
+  
+  
+  
+  
+  
+ 
  
  
