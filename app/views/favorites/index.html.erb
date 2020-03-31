@@ -7,14 +7,13 @@
             <h2 class="topic-author">
               <%= topic.user.name %>
             </h2>
-            
               <%= image_tag topic.image.url %>
               <%= image_tag 'icons/heart.png', class: 'topic-index-icon2' %>
               <%= topic.favorite_users.count %>
               
                 <% if logged_in? %>
                   <%= link_to new_comment_path(topic_id: topic.id) do %>
-                  <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+                   <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
                   <% end %>
                 <% end %>
              <p class="topic-text">
